@@ -1,0 +1,32 @@
+<div style="background-color:burlywood" class="card">  
+    <div class="card-body">  
+      <h5 class="card-title">Component 4</h5>  
+      <input name="comp4" #comp4 type="text" />  
+      <button (click)="onSubmit(comp4)">Submit</button>  
+      <p class="card-text">{{Component4Data}}</p>  
+
+      Mobile No: <input name="comp5" #compMob type="text" placeholder="Please enter the Mobile no" /> 
+          State: <input name="comp6"  type="text" placeholder="Please enter the state "  ref-state/> 
+      <button (click)="onSave(compMob)" >save</button> 
+
+
+    </div>  
+  </div>
+  <br/>{{compMob}}
+  <br/>{{compMob.value}}
+  <br/>{{compMob.placeholder}}
+  <br/>
+ 
+  <div *ngFor="let color of colors" >
+    {{color}}
+    </div>
+    <br/>
+<!--comment-->
+<select #mycolor (change)="setColor(mycolor.value)" >
+    <option *ngFor="let color of colors">
+        {{color}}
+    </option>
+</select>
+
+{{mycolor.value}}
+
