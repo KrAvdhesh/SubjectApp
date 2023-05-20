@@ -6,7 +6,8 @@ import { Component2Component } from './component2/component2.component';
 import { Component3Component } from './component3/component3.component';
 import { Component4Component } from './component4/component4.component';
 import { DataSharingService } from './data-service.service';
-
+import { CookieService } from 'ngx-cookie-service';
+//'./ngx-cookie-service/public-api';
   
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DataSharingService } from './data-service.service';
   imports: [
     BrowserModule
   ],
-  providers: [DataSharingService],
+  providers: [DataSharingService, CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
