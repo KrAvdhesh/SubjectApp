@@ -1,10 +1,13 @@
 import { Component,ElementRef,HostListener ,Renderer2} from '@angular/core';  
 import { DataSharingService } from '../data-service.service';  
 import { CookieService } from 'ngx-cookie-service';
+import { preserveWhitespacesDefault } from '@angular/compiler';
+console.log('component4 loaded')
 @Component({  
   selector: 'app-component4',  
   templateUrl: './component4.component.html',  
-  styleUrls: ['./component4.component.css']  
+  styleUrls: ['./component4.component.css'] , 
+  preserveWhitespaces: true
 })  
 export class Component4Component {  
   title :string ="Hello comp4";
@@ -65,6 +68,7 @@ this.changecolor('Red');
 
     this.el.nativeElement.style = 'Black';
   }
+  
 
   changecolor(color:string)
   {
@@ -75,6 +79,9 @@ this.changecolor('Red');
     //setElementProperty(renderElement, propertyName, propertyValue)	
     //setProperty(renderElement, propertyName, propertyValue)
 
+
   }
+
+
 
 }
